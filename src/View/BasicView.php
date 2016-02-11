@@ -9,9 +9,9 @@ namespace src\view;
 abstract class BasicView
 {
 
-    function renderAll(){
+    function renderAll($indice='1'){
         renderHead();
-        render();
+        render($indice);
         renderFoot();
     }
 
