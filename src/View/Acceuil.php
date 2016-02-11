@@ -13,9 +13,6 @@ class Acceuil extends BasicView{
 		
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
 		$app= \Slim\Slim::getInstance();
-		
-		$root = \Slim\Slim::getInstance()->request->getRootUri();
-		$app= \Slim\Slim::getInstance();
 		$scrib='
 				<div class="container">
 
