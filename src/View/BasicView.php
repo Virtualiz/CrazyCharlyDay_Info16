@@ -9,10 +9,14 @@ namespace view;
 abstract class BasicView
 {
 
+	public function __construct(){
+		
+	}
+	
     function renderAll($indice='1'){
-        renderHead();
-        render($indice);
-        renderFoot();
+    	$this->renderHead();
+    	$this->render($indice);
+    	$this->renderFoot();
     }
 
     abstract function render($i);
@@ -33,7 +37,7 @@ abstract class BasicView
     <title>Pochette-Surprise</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -74,16 +78,6 @@ abstract class BasicView
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Accueil</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
-
 
 END;
 echo $s;
