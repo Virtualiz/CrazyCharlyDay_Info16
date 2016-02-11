@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 11 Février 2016 à 17:10
+-- Généré le :  Jeu 11 Février 2016 à 17:13
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS `pochette` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `prix` int(11) NOT NULL,
   `collecte` int(11) NOT NULL,
+  `url_argent` varchar(200) NOT NULL,
+  `url_cadeau` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
