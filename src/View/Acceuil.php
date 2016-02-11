@@ -17,6 +17,9 @@ class Acceuil extends BasicView{
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
 		$app= \Slim\Slim::getInstance();
 		$scrib='
+				<div class="container">
+
+      			<div class="starter-template">
 				<section>
 				
 					<h1>Acceuil</h1>
@@ -55,7 +58,9 @@ class Acceuil extends BasicView{
 				eget, posuere finibus ex. Quisque sem lacus, pretium ut tempor non, interdum fermentum est. Pellentesque nec elementum arcu, 
 				eu auctor libero.</p>
 					
-				</section>';
+				</section>
+				</div>
+				</div>';
 		
 		echo $scrib;
 
