@@ -6,4 +6,37 @@
  * Time: 10:09
  */
 
-echo "index";
+require_once 'vendor/autoload.php';
+
+use Slim\Slim as Slim;
+use \View\Catalogue;
+use \View\Acceuil;
+
+
+$app=new Slim();
+
+$requette=$app->request;
+$info=explode('/',$requette->getPathInfo());
+
+$navControl=new NavController($requette);
+
+/*$app->notFound(function() use($app) {
+
+});*/
+
+
+//---------------------/--------------------------------
+$app->get('/', function(){
+	$vue=new Acceuil();
+	$vue->renderAll();
+});
+
+//---------------------/inscription---------------------
+$app->get('/catalogue', function(){
+	$vue=new Catalogue();
+	$vue->renderAll();
+});
+
+
+
+$app->run();
