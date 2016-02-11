@@ -22,6 +22,8 @@ abstract class BasicView
     abstract function render($i);
 
     function renderHead(){
+        $app =  \Slim\Slim::getInstance();
+        $url = $app->urlFor('catalogue');
         $s=<<<END
         <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +45,7 @@ abstract class BasicView
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -72,6 +74,7 @@ abstract class BasicView
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Accueil</a></li>
+            <li><a href="$url">Catalogue</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
