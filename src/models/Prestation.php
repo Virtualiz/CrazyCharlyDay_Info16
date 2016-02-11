@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 class Prestation extends Model
 {
     protected $table = "prestation";
-    protected $timestamps = false;
+    protected $primaryKey="id";
+    public $timestamps = false;
 
     function type(){
         return $this->belongsTo("type");

@@ -11,6 +11,7 @@ require_once 'vendor/autoload.php';
 use Slim\Slim as Slim;
 use \View\Catalogue;
 use \View\Acceuil;
+use \control\ClientController;
 
 
 $app=new Slim();
@@ -31,8 +32,9 @@ $app->get('/', function(){
 
 //---------------------/inscription---------------------
 $app->get('/catalogue', function(){
-	$vue=new \contol\ClientController(null);
-	$vue->afficherTout();
+	$control=new ClientController(null);
+	$vue=new Catalogue($control->afficherTout());
+	$vue->renderAll();
 })->name('catalogue');
 
 

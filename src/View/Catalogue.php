@@ -1,3 +1,4 @@
+
 <?php
 
 namespace view;
@@ -15,11 +16,28 @@ class Catalogue extends BasicView{
 	}
 	
 
-	function render($indice){
+	function render($indice)
+	{
 
-		
+
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
-		$app= \Slim\Slim::getInstance();
+		$app = \Slim\Slim::getInstance();
+
+		$scrib = '';
+
+		if ($indice == '1') {
+
+
+			foreach ($this->tab as $prestation) {
+				$scrib .= "
+			<div>
+				<h1>" . $prestation->nom . "</h1>
+				<p>" . $prestation->descr . "</p><br/>
+				<h2> Prix :" . $prestation->prix . "</h2>
+				<img src='/doc/img/" . $prestation->img . "'>
+			</div>
+			";
+			}
 		
 		$scrib='
 				<section>
@@ -32,19 +50,18 @@ class Catalogue extends BasicView{
 					';			
 		}
 					
-					'<h1>Activité</h1>';
+					'<h1>ActivitÃ©</h1>';
 					
 					'<h1>Restauration</h1>';
 					
-					'<h1>Hébergement</h1>';
+					'<h1>HÃ©bergement</h1>';
 				
 				'</section>
 				
 				';
 
-		
-
-		echo $scrib;
+			echo $scrib;
+		}
 		
 	}
 	
