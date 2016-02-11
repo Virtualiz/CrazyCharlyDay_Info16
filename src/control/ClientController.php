@@ -10,9 +10,8 @@ use view\Catalogue;
 class ClientController extends AbstractController {
 	
 	public function afficherTout(){
-		$presta = Prestation::all();
-
-		$vue = new Catalogue($presta);
+		$presta = Prestation::all()->toArray();
+		return $presta;
 	}
 	
 }
