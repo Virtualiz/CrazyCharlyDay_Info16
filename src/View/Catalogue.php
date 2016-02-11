@@ -20,20 +20,6 @@ class Catalogue extends BasicView{
 
 		$scrib = '';
 
-		if ($indice == '1') {
-
-
-			foreach ($this->tab as $prestation) {
-				$scrib .= "
-			<div>
-				<h1>" . $prestation->nom . "</h1>
-				<p>" . $prestation->descr . "</p><br/>
-				<h2> Prix :" . $prestation->prix . "</h2>
-				<img src='/doc/img/" . $prestation->img . "'>
-			</div>
-			";
-			}
-		
 		$scrib='
 				<section>
 				
@@ -83,7 +69,6 @@ class Catalogue extends BasicView{
 				$scrib.='</fieldset></form></section>';
 
 			echo $scrib;
-		}
 		
 	}
 	
