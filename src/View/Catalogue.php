@@ -1,11 +1,6 @@
-
 <?php
 
-namespace view;
-
-
-use view\BasicView;
-
+namespace View;
 
 class Catalogue extends BasicView{
 	
@@ -16,28 +11,11 @@ class Catalogue extends BasicView{
 	}
 	
 
-	function render($indice)
-	{
+	function render($indice){
 
-
+		
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
-		$app = \Slim\Slim::getInstance();
-
-		$scrib = '';
-
-		if ($indice == '1') {
-
-
-			foreach ($this->tab as $prestation) {
-				$scrib .= "
-			<div>
-				<h1>" . $prestation->nom . "</h1>
-				<p>" . $prestation->descr . "</p><br/>
-				<h2> Prix :" . $prestation->prix . "</h2>
-				<img src='/doc/img/" . $prestation->img . "'>
-			</div>
-			";
-			}
+		$app= \Slim\Slim::getInstance();
 		
 		$scrib='
 				<section>
@@ -46,22 +24,25 @@ class Catalogue extends BasicView{
 		
 		foreach ($this->tab as $val){
 			$scrib+='
-					
+					<form>
+						<fieldset>
+							<input type="check" id="fjf1">'.$val->nom.'</input>
+						</fieldset>
+					</form>
 					';			
 		}
 					
-					'<h1>ActivitÃ©</h1>';
+					$scrib+='<h1>Activité</h1>';
 					
-					'<h1>Restauration</h1>';
+					$scrib+='<h1>Restauration</h1>';
 					
-					'<h1>HÃ©bergement</h1>';
+					$scrib+='<h1>Hébergement</h1>';
 				
-				'</section>
-				
-				';
+				$scrib+='</section>';
 
-			echo $scrib;
-		}
+		
+
+		echo $scrib;
 		
 	}
 	
