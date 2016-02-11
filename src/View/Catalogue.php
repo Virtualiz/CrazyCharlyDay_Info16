@@ -1,10 +1,6 @@
 <?php
 
-namespace view;
-
-
-use view\BasicView;
-
+namespace View;
 
 class Catalogue extends BasicView{
 	
@@ -41,23 +37,50 @@ class Catalogue extends BasicView{
 		$scrib='
 				<section>
 				
-					<h1>Attention</h1>';
+					<h1>Attention</h1>
+				
+						<form><fieldset>';
 		
-		foreach ($this->tab as $val){
-			$scrib+='
+		foreach ($this->tab as  $val){
+			if($val["type"]==1){
+				$scrib.='		<input type="checkbox" id="fjf1" value="'.$val["id"].'">'.$val["nom"].'</input>';		
+			}
+		}
+					$scrib.='
+						</fieldset></form>
+					<h1>Activité</h1>
+						<form><fieldset>';
 					
-					';			
+		foreach ( $this->tab as $val ) {
+			if ($val ["type"] == 2) {
+				$scrib .= '		<input type="checkbox" id="fjf1" value="'.$val["id"].'">' . $val ["nom"] . '</input>';
+			}
 		}
 					
-					'<h1>Activité</h1>';
+		
+					$scrib.='
+						</fieldset></form>
+					<h1>Restauration</h1>
+						<form><fieldset>';
 					
-					'<h1>Restauration</h1>';
+		foreach ( $this->tab as $val ) {
+			if ($val ["type"] == 3) {
+				$scrib .= '		<input type="checkbox" id="fjf1" value="'.$val["id"].'">' . $val ["nom"] . '</input>';
+			}
+		}
 					
-					'<h1>Hébergement</h1>';
+					$scrib.='
+						</fieldset></form>
+					<h1>Hébergement</h1>
+						<form><fieldset>';
+					
+		foreach ( $this->tab as $val ) {
+			if ($val ["type"] == 4) {
+				$scrib .= '		<input type="checkbox" id="fjf1" value="'.$val["id"].'">' . $val ["nom"] . '</input>';
+			}
+		}
 				
-				'</section>
-				
-				';
+				$scrib.='</fieldset></form></section>';
 
 			echo $scrib;
 		}
