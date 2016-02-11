@@ -18,8 +18,6 @@ $app=new Slim();
 $requette=$app->request;
 $info=explode('/',$requette->getPathInfo());
 
-$navControl=new NavController($requette);
-
 /*$app->notFound(function() use($app) {
 
 });*/

@@ -4,17 +4,17 @@ namespace View;
 
 use src\view\BasicView;
 
-class Catalogue extends BasicViewView{
-
-	$root = \Slim\Slim::getInstance()->request->getRootUri();
-	$app= \Slim\Slim::getInstance();
+class Acceuil extends BasicView{
 	
 	public function __construct(){
 	
 	}
 	
 	function render(){
-
+		
+		$root = \Slim\Slim::getInstance()->request->getRootUri();
+		$app= \Slim\Slim::getInstance();
+		
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
 		$app= \Slim\Slim::getInstance();
 		$scrib='

@@ -3,14 +3,19 @@
   "description": "description_text",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "author's name",
-      "email": "email@example.com"
-    }
-  ],
+  
   "require": {
     "slim/slim": "2.*",
     "illuminate/database": "*"
+  },
+  
+  "autoload": {
+    "psr-0": {
+      "conf" : "src",
+      "control" : "src",
+      "models" : "src",
+      "View" : "src"
+    }
   }
+  
 }

@@ -6,8 +6,6 @@ use src\view\BasicView;
 
 class Catalogue extends BasicView{
 	
-	$root = \Slim\Slim::getInstance()->request->getRootUri();
-	$app= \Slim\Slim::getInstance();
 	
 	public function __construct(){
 		
@@ -15,8 +13,12 @@ class Catalogue extends BasicView{
 	
 	function render(){
 		
+		$root = \Slim\Slim::getInstance()->request->getRootUri();
+		$app= \Slim\Slim::getInstance();
 		
-		$scrib='';
+		$scrib='
+				
+				';
 		
 	}
 	

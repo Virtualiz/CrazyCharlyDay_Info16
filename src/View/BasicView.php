@@ -1,5 +1,5 @@
 <?php
-namespace src\view;
+namespace view;
 /**
  * Created by PhpStorm.
  * User: Bruno
