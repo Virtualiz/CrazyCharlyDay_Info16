@@ -31,9 +31,9 @@ $app->get('/', function(){
 
 //---------------------/inscription---------------------
 $app->get('/catalogue', function(){
-	$vue=new Catalogue();
-	$vue->renderAll();
-});
+	$vue=new \contol\ClientController(null);
+	$vue->afficherTout();
+})->name('catalogue');
 
 
 
