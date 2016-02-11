@@ -13,6 +13,8 @@ class ClientController extends AbstractController {
 		$presta = Prestation::all();
 
 		$vue = new Catalogue($presta);
+
+		$vue->renderAll();
 	}
 	
 }
