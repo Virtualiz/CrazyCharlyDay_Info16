@@ -14,26 +14,31 @@ class Catalogue extends BasicView{
 	}
 	
 
-	function render($indice){
+	function render($indice)
+	{
 
-		
+
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
-		$app= \Slim\Slim::getInstance();
-		
-		$scrib='';
+		$app = \Slim\Slim::getInstance();
 
-		foreach($this->tab as $prestation){
-			$scrib .="
+		$scrib = '';
+
+		if ($indice == '1') {
+
+
+			foreach ($this->tab as $prestation) {
+				$scrib .= "
 			<div>
-				<h1>".$prestation->nom."</h1>
-				<p>".$prestation->descr."</p><br/>
-				<h2> Prix :".$prestation->prix."</h2>
-				<img src='/doc/img/".$prestation->img."'>
+				<h1>" . $prestation->nom . "</h1>
+				<p>" . $prestation->descr . "</p><br/>
+				<h2> Prix :" . $prestation->prix . "</h2>
+				<img src='/doc/img/" . $prestation->img . "'>
 			</div>
 			";
-		}
+			}
 
-		echo $scrib;
+			echo $scrib;
+		}
 		
 	}
 	
