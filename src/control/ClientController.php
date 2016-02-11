@@ -1,6 +1,6 @@
 <?php
 
-namespace contol;
+namespace control;
 
 use control\AbstractController;
 use models\Prestation;
