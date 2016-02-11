@@ -26,6 +26,8 @@ class Collecte extends BasicView{
 				</section>
 				';
 		
+		echo $scrib;
+		
 	}
 	
 }
