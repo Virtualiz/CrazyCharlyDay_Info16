@@ -2,8 +2,6 @@
 
 namespace View;
 
-use src\view\BasicView;
-
 class Catalogue extends BasicView{
 	
 	
@@ -11,7 +9,7 @@ class Catalogue extends BasicView{
 		
 	}
 	
-	function render(){
+	function render($indice){
 		
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
 		$app= \Slim\Slim::getInstance();

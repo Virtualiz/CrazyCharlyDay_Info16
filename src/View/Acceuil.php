@@ -2,15 +2,14 @@
 
 namespace View;
 
-use src\view\BasicView;
-
 class Acceuil extends BasicView{
 	
 	public function __construct(){
-	
+		parent::__construct();
 	}
 	
-	function render(){
+	
+	function render($indice){
 		
 		$root = \Slim\Slim::getInstance()->request->getRootUri();
 		$app= \Slim\Slim::getInstance();
@@ -57,6 +56,8 @@ class Acceuil extends BasicView{
 				eu auctor libero.</p>
 					
 				</section>';
+		
+		echo $scrib;
 
 	}
 
