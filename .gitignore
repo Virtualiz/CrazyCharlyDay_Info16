@@ -6,3 +6,6 @@ src/conf/*
 .project
 .gitignore
 vendor
+/bin/
+/.classpath
+/.htaccess
